@@ -73,6 +73,20 @@
                     &:hover{
                         color: $clr-orange;
                     }
+                    @media screen and (max-width:500px) {
+                       display: none;
+
+                    }
+                }
+                @media screen and (max-width:500px){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    
+                }
+                @media screen and (max-width:375px) {
+                    width: 74%;
+                    align-items: start;
                 }
             }
             .tags{
@@ -97,13 +111,13 @@
                 }
                 ul{
                     margin-top: 1rem;
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(1, 1fr);
 
                     @media screen and (min-width: 576px){
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(2, 1fr);
                     }
                     @media screen and (min-width: 768px){
-                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-columns: repeat(3, 1fr);
                     }
                     @media screen and (min-width: 992px){
                         grid-template-columns: repeat(3, 1fr);
@@ -135,6 +149,20 @@
 
                 }
             }
+
+            @media screen and (max-width:500px) and (min-width:375px) {
+                .ingredients{
+                    max-width: 100%;
+                }
+            }
+
+            @media screen and (max-width:375px){
+                .ingredients{
+                    max-width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
         }
 
         .details-img{
@@ -143,6 +171,20 @@
             height: 100%;
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
+
+        @media screen and (max-width:500px) and (min-width:375px){
+         .details-img{
+             max-width: 100%;
+            // padding: auto;
+         }
+        }
+
+        @media screen and (max-width:375px){
+            .details-img{
+                max-width: 100%;
+               // padding: auto;
+            }
+           }
 
         @media screen and (min-width: 992px){
             grid-template-columns: repeat(2, 1fr);
